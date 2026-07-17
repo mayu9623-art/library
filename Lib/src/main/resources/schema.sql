@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS books;
+
+CREATE TABLE books (
+    id BIGSERIAL PRIMARY KEY,
+    isbn VARCHAR(20) NOT NULL UNIQUE,
+    title VARCHAR(200) NOT NULL,
+    author VARCHAR(100) NOT NULL,
+    published_date DATE NOT NULL
+);
