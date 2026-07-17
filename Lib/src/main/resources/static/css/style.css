@@ -1,0 +1,140 @@
+@charset "UTF-8";
+body{
+
+    background:#f5f7fb;
+
+}
+
+/* PC */
+
+.desktop-table{
+
+    display:block;
+
+}
+
+.mobile-card{
+
+    display:none;
+
+}
+
+/* カード */
+
+.book-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin-bottom:18px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+}
+
+.book-title{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:#0d6efd;
+
+}
+
+.book-isbn{
+
+    color:#666;
+
+    margin-top:6px;
+
+}
+
+.book-info{
+
+    margin-top:15px;
+
+    line-height:2;
+
+    color:#555;
+
+}
+
+/* FAB */
+
+.fab{
+
+    display:none;
+
+}
+
+/* スマホ */
+
+@media(max-width:768px){
+
+.desktop-table{
+
+    display:none;
+
+}
+
+.mobile-card{
+
+    display:block;
+
+}
+
+.container{
+
+    padding-bottom:90px;
+
+}
+
+h2{
+
+    font-size:22px;
+
+}
+
+.fab{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#0d6efd;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    text-decoration:none;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+}
+
+.fab:hover{
+
+    color:white;
+
+}
+
+}
