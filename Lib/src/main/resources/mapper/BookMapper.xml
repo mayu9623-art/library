@@ -64,5 +64,21 @@
         DELETE FROM books
         WHERE id = #{id}
     </delete>
+        <select id="search" resultMap="BookResultMap">
+    SELECT id, isbn, title, author, published_date
+    FROM books
+    <where>
+        <if test="isbn != null and isbn != ''">
+            AND isbn = #{isbn}
+        </if>
+        <if test="title != null and title != ''">
+            AND title LIKE CONCAT('%', #{title}, '%')
+        </if>
+        <if test="author != null and author != ''">
+            AND author LIKE CONCAT('%', #{author}, '%')
+        </if>
+    </where>
+    ORDER BY id
+</select>
 
 </mapper>
