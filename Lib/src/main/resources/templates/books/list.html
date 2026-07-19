@@ -40,8 +40,9 @@
     <input type="text" name="title" placeholder="タイトル" th:value="${param.title}">
     <input type="text" name="author" placeholder="著者" th:value="${param.author}">
     <button type="submit">検索</button>
-          <a th:href="@{/books}">一覧に戻る</a>
+        
 </form>
+        <a th:href="@{/books}" class="btn">一覧に戻る</a>
     </div>
 
     <!-- ============================= -->
