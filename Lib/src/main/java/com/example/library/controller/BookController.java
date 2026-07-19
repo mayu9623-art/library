@@ -84,6 +84,7 @@ public String list(@RequestParam(required = false) String isbn,
             : bookService.findAll();
 
     model.addAttribute("books", books);
+    model.addAttribute("searched", hasCondition);
     return "books/list";
 }
 }
