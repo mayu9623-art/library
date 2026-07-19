@@ -12,6 +12,8 @@ public interface BookService {
 
     List<BookDto> findAll();
 
+     List<BookDto> searchBooks(String isbn, String title, String author);
+
     BookDto create(BookCreateRequest request);
 
     BookDto update(Long id, BookUpdateRequest request);
