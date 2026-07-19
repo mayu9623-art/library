@@ -24,11 +24,7 @@ public class BookController {
 
     private final BookService bookService;
 
-    @GetMapping
-    public String list(Model model) {
-        model.addAttribute("books", bookService.findAll());
-        return "books/list";
-    }
+
 
     @GetMapping("/new")
     public String newForm(Model model) {
