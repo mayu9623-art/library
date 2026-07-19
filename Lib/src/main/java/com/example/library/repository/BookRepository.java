@@ -58,4 +58,8 @@ public interface BookRepository {
      * @return 削除件数
      */
     int delete(Long id);
+
+    List<Book> search(@Param("isbn") String isbn,
+                   @Param("title") String title,
+                   @Param("author") String author);
 }
