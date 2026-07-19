@@ -72,4 +72,21 @@ public class BookController {
         bookService.delete(id);
         return "redirect:/books";
     }
+    @GetMapping
+public String list(@RequestParam(required = false) String isbn,
+                    @RequestParam(required = false) String title,
+                    @RequestParam(required = false) String author,
+                    Model model) {
+    boolean hasCondition =
+            (isbn != null && !isbn.isBlank()) ||
+            (title != null && !title.isBlank()) ||
+            (author != null && !author.isBlank());
+
+    var books = hasCondition
+            ? bookService.searchBooks(isbn, title, author)
+            : bookService.findAll();
+
+    model.addAttribute("books", books);
+    return "books/list";
+}
 }
