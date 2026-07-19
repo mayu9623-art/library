@@ -22,6 +22,13 @@ import lombok.RequiredArgsConstructor;
 public class BookServiceImpl implements BookService {
 
     private final BookRepository bookRepository;
+    @Override
+public List<BookDto> searchBooks(String isbn, String title, String author) {
+    return bookRepository.search(isbn, title, author)
+            .stream()
+            .map(this::toDto)
+            .toList();
+}
 
     @Override
     public BookDto findById(Long id) {
